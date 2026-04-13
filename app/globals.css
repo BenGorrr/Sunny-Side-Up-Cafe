@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255, 216, 119, 0.18), transparent 25%),
+    linear-gradient(180deg, #fffdf8 0%, #fffaf3 48%, #fff7ee 100%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), serif;
+}
+
+::selection {
+  background: rgba(246, 170, 28, 0.28);
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .section-heading {
+    @apply text-3xl font-semibold leading-tight text-espresso sm:text-4xl;
+  }
+
+  .section-copy {
+    @apply mt-4 max-w-2xl text-base leading-7 text-espresso/75 sm:text-lg;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-full bg-espresso px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-espresso/90;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-full border border-espresso/15 bg-white px-5 py-3 text-sm font-semibold text-espresso transition duration-300 hover:-translate-y-0.5 hover:border-sun-300 hover:bg-sun-50;
+  }
+
+  .glass-panel {
+    @apply rounded-[28px] border border-white/60 bg-white/85 shadow-soft backdrop-blur;
+  }
+}
