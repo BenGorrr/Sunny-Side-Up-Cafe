@@ -35,6 +35,7 @@ export type ContactDetails = {
   address: string;
   phone: string;
   whatsapp: string;
+  mapUrl: string;
   email: string;
   hours: { day: string; hours: string }[];
   landmark: string;
@@ -167,12 +168,13 @@ export const contactDetails: ContactDetails = {
   address: "6, Riveria City, LG-08, 5, Jalan Tun Sambanthan, Brickfields, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
   phone: "+60 12-709 0504",
   whatsapp: "https://wa.me/60127090504",
+  mapUrl: "https://maps.google.com/?q=6,+Riveria+City,+LG-08,+5,+Jalan+Tun+Sambanthan,+Brickfields,+50470+Kuala+Lumpur",
   email: "hello@sunnysideupcafe.com",
   hours: [
     { day: "Monday", hours: "9:30 AM - 5:00 PM" },
     { day: "Tuesday", hours: "Closed" },
     { day: "Wednesday - Sunday", hours: "9:30 AM - 5:00 PM" },
   ],
-  landmark: "Just opposite Serene Community Park",
+  landmark: "A short walk from KL Sentral in Brickfields",
   parking: "Free Street parking and gated visitors parking available",
 };

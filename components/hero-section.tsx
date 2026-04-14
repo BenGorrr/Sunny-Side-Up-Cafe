@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { contactDetails } from "@/data/site";
 import { PlaceholderImage } from "@/components/placeholder-image";
 
 const quickStats = [
@@ -28,7 +29,7 @@ export function HeroSection() {
               <Link href="#menu" className="primary-button">
                 View Menu
               </Link>
-              <Link href="https://wa.me/60123456789" className="secondary-button">
+              <Link href={contactDetails.whatsapp} className="secondary-button">
                 WhatsApp Us
               </Link>
             </div>

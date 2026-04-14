@@ -48,10 +48,7 @@ export function VisitSection({ details }: { details: ContactDetails }) {
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="https://maps.google.com/?q=18+Sunbeam+Avenue+Taman+Serene+Johor+Bahru+80250"
-                className="primary-button"
-              >
+              <Link href={details.mapUrl} className="primary-button">
                 Get Directions
               </Link>
               <Link href={details.whatsapp} className="secondary-button">

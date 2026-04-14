@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MenuItem } from "@/data/site";
+import { contactDetails } from "@/data/site";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { SectionHeading } from "@/components/section-heading";
 
@@ -13,7 +14,7 @@ export function FeaturedMenuSection({ items }: { items: MenuItem[] }) {
             title="The dishes people come back for"
             description="A handpicked preview of the breakfast plates, drinks, mains, and desserts that keep our tables full and our regulars happy."
           />
-          <Link href="https://wa.me/60123456789" className="secondary-button">
+          <Link href={contactDetails.whatsapp} className="secondary-button">
             Ask for Full Menu
           </Link>
         </div>
