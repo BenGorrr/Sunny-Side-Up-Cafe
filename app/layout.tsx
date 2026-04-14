@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fraunces.variable} ${manrope.variable} bg-cream text-espresso antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
