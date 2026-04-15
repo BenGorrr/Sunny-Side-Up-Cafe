@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Sunny Side Up Cafe icon">
+  <rect x="18" y="18" width="164" height="164" rx="40" fill="#FFF8D9"/>
+  <circle cx="72" cy="68" r="28" fill="#FFE98B"/>
+  <text x="48" y="92" fill="#5F7FD8" font-family="'Trebuchet MS', 'Arial Rounded MT Bold', sans-serif" font-size="78" font-weight="700">S</text>
+  <ellipse cx="105" cy="132" rx="19" ry="6" fill="#5F7FD8" opacity="0.18"/>
+  <path d="M83 116c0 14 10 25 22 25s22-11 22-25" fill="#5F7FD8"/>
+  <path d="M90 117c2 8 8 14 15 14s13-6 15-14" fill="#FFE98B"/>
+  <path d="M83 116h44" stroke="#5F7FD8" stroke-linecap="round" stroke-width="4"/>
+</svg>
