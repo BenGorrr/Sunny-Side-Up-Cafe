@@ -1,14 +1,14 @@
 "use client";
 
+import { BrandLogo } from "@/components/brand-logo";
 import { ContactDetails } from "@/data/site";
 import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
     { label: "Home", href: "#home" },
-    { label: "Menu", href: "#menu" },
-    { label: "Promotions", href: "#promotions" },
     { label: "About", href: "#about" },
+    { label: "Updates", href: "#updates" },
     { label: "Visit Us", href: "#visit-us" },
     { label: "Contact", href: "#contact" },
 ];
@@ -25,9 +25,10 @@ export function Navbar({ details }: { details: ContactDetails }) {
                 >
                     <Link
                         href="#home"
-                        className="text-lg font-semibold tracking-wide text-espresso sm:text-xl"
+                        className="transition-transform duration-300 hover:scale-[1.01]"
+                        aria-label="Sunny Side Up Cafe home"
                     >
-                        Sunny Side Up Cafe
+                        <BrandLogo className="h-14 w-auto sm:h-16" />
                     </Link>
 
                     <div className="hidden items-center gap-7 lg:flex">
