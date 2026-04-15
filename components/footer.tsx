@@ -3,8 +3,8 @@ import { ContactDetails } from "@/data/site";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Updates", href: "#updates" },
+  { label: "Menu", href: "#menu" },
+  { label: "Promotions", href: "#promotions" },
   { label: "Visit Us", href: "#visit-us" },
   { label: "Contact", href: "#contact" },
 ];
@@ -16,8 +16,8 @@ export function Footer({ details }: { details: ContactDetails }) {
         <div>
           <p className="text-xl font-semibold text-espresso">Sunny Side Up Cafe</p>
           <p className="mt-3 max-w-sm text-sm leading-7 text-espresso/72">
-            The official site is being prepared. In the meantime, you can still find our location, opening hours, and
-            WhatsApp contact here.
+            Warm brunch favorites, thoughtfully made coffee, and a welcoming space for everyday moments worth slowing
+            down for.
           </p>
         </div>
 
