@@ -2,6 +2,7 @@
 
 import { BrandLogo } from "@/components/brand-logo";
 import { ContactDetails } from "@/data/site";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -28,7 +29,16 @@ export function Navbar({ details }: { details: ContactDetails }) {
                         className="transition-transform duration-300 hover:scale-[1.01]"
                         aria-label="Sunny Side Up Cafe home"
                     >
-                        <BrandLogo className="h-14 w-auto sm:h-16" />
+                        <span className="relative block h-12 w-[190px] sm:h-[54px] sm:w-[230px]">
+                            <Image
+                                src="/brand/sunnysideupcafe-logo-wordmark.png"
+                                alt="Sunny Side Up Cafe"
+                                fill
+                                priority
+                                sizes="(min-width: 640px) 230px, 190px"
+                                className="object-contain"
+                            />
+                        </span>
                     </Link>
 
                     <div className="hidden items-center gap-7 lg:flex">
