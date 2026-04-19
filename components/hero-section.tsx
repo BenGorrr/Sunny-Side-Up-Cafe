@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { contactDetails } from "@/data/site";
-import { PlaceholderImage } from "@/components/placeholder-image";
 
 const quickStats = [
   { label: "Freshly made daily", value: "20+" },
@@ -47,21 +47,27 @@ export function HeroSection() {
           <div className="relative">
             <div className="absolute -left-4 top-6 h-24 w-24 rounded-full bg-sun-200/70 blur-2xl sm:-left-10 sm:h-36 sm:w-36" />
             <div className="absolute -right-4 bottom-10 h-28 w-28 rounded-full bg-[#f5d9bf] blur-2xl sm:-right-8 sm:h-44 sm:w-44" />
-            <div className="glass-panel relative p-4 sm:p-5">
-              <PlaceholderImage
-                title="Hero food and coffee placeholder"
-                subtitle="Replace with signature cafe photography"
-                className="min-h-[22rem] sm:min-h-[28rem]"
-                tone="from-[#ffe9a9] via-[#ffc95b] to-[#e89852]"
-              />
+            <div className="glass-panel relative overflow-hidden p-4 sm:p-5">
+              <div className="relative min-h-[22rem] overflow-hidden rounded-[24px] sm:min-h-[28rem]">
+                <Image
+                  src="/content/house-specials-clean.png"
+                  alt="Sunny Side Up Cafe house specials featuring Banana Matcha and Peanut Panic drinks"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 42vw, 100vw"
+                  className="object-cover"
+                  style={{ objectPosition: "center 72%" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/16 via-transparent to-transparent" />
+              </div>
               <div className="absolute bottom-8 left-8 right-8 rounded-[24px] border border-white/55 bg-white/88 p-5 shadow-card backdrop-blur">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cocoa/65">Today&apos;s favorite</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cocoa/65">House specials</p>
                 <div className="mt-3 flex items-end justify-between gap-4">
                   <div>
-                    <p className="text-xl font-semibold text-espresso">Brown Sugar Sea Salt Latte</p>
-                    <p className="mt-1 text-sm text-espresso/70">Creamy, balanced, and made for repeat orders.</p>
+                    <p className="text-xl font-semibold text-espresso">Banana Matcha & Peanut Panic</p>
+                    <p className="mt-1 text-sm text-espresso/70">Two of the drinks currently leading the menu highlights.</p>
                   </div>
-                  <span className="rounded-full bg-sun-100 px-3 py-1 text-sm font-semibold text-cocoa">$5.80</span>
+                  <span className="rounded-full bg-sun-100 px-3 py-1 text-sm font-semibold text-cocoa">From RM16</span>
                 </div>
               </div>
             </div>

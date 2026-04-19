@@ -5,6 +5,8 @@ export type MenuItem = {
   category: string;
   badge?: string;
   art: string;
+  imageSrc?: string;
+  imageAlt?: string;
 };
 
 export type Promotion = {
@@ -24,6 +26,10 @@ export type GalleryItem = {
   title: string;
   subtitle: string;
   tone: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imageFit?: "cover" | "contain";
+  imagePanelClassName?: string;
 };
 
 export type VisitHighlight = {
@@ -44,49 +50,44 @@ export type ContactDetails = {
 
 export const featuredItems: MenuItem[] = [
   {
-    name: "Sunrise Big Breakfast",
-    description: "Soft scrambled eggs, sourdough toast, chicken sausage, roasted tomato, and herb butter.",
-    price: "$14.90",
-    category: "Breakfast",
+    name: "Banana Matcha",
+    description: "Creamy oat matcha finished with banana cloud cream.",
+    price: "Price coming soon",
+    category: "Signature Drink",
     badge: "Best Seller",
-    art: "Golden breakfast plate",
+    art: "Banana Matcha image coming soon",
+    imageSrc: "/content/banana-matcha-large.jpeg",
+    imageAlt: "Banana Matcha served in a glass with creamy cloud foam on top",
   },
   {
-    name: "Brown Sugar Sea Salt Latte",
-    description: "Double-shot espresso with silky milk, brown sugar syrup, and a light sea salt cream finish.",
-    price: "$5.80",
-    category: "Coffee",
-    badge: "Popular",
-    art: "Iced latte swirl",
+    name: "Original Salt Bread",
+    description: "Soft and fluffy inside with a crispy bottom, finished with a light touch of sea salt.",
+    price: "Price coming soon",
+    category: "Signature Bread",
+    badge: "Top Pick",
+    art: "Original Salt Bread image coming soon",
+    imageSrc: "/content/salt-bread-large.jpeg",
+    imageAlt: "Freshly baked Original Salt Bread arranged on a cooling rack",
   },
   {
-    name: "Lemon Ricotta Pancakes",
-    description: "Fluffy pancakes topped with whipped ricotta, honey drizzle, and citrus zest.",
-    price: "$12.50",
-    category: "Desserts",
-    art: "Stacked pancake tower",
+    name: "Peanut Panic",
+    description: "Bold iced black coffee top with peanut butter cream foam.",
+    price: "Price coming soon",
+    category: "Signature Drink",
+    art: "Peanut Panic image coming soon",
+    imageSrc: "/content/peanut-panic-large.jpeg",
+    imageAlt: "Peanut Panic iced black coffee topped with peanut butter cream foam",
   },
   {
-    name: "Sunny Chicken Aglio Olio",
-    description: "Garlic-infused olive oil pasta with grilled chicken, chili flakes, and fresh parsley.",
-    price: "$15.40",
-    category: "Mains",
-    art: "Warm pasta bowl",
-  },
-  {
-    name: "Caramel Banana French Toast",
-    description: "Brioche toast with caramelized banana, maple cream, and toasted almond crunch.",
-    price: "$11.90",
-    category: "Breakfast",
-    badge: "Chef Pick",
-    art: "French toast slice",
-  },
-  {
-    name: "Tiramisu Cloud Cake",
-    description: "Light mascarpone sponge layered with espresso cream and cocoa dusting.",
-    price: "$7.20",
-    category: "Desserts",
-    art: "Soft cake square",
+    name: "Butter Scone",
+    description:
+      "Rich buttery scone with a delicate crumb and golden finish, paired with homemade mixed berry jam and silky whipped cream.",
+    price: "Price coming soon",
+    category: "Pastry",
+    badge: "Crowd's Favorite",
+    art: "Butter Scone image coming soon",
+    imageSrc: "/content/scone-large.jpeg",
+    imageAlt: "Golden Butter Scones baked until crisp on the outside",
   },
 ];
 
@@ -135,10 +136,34 @@ export const visitHighlights: VisitHighlight[] = [
 ];
 
 export const galleryItems: GalleryItem[] = [
-  { title: "Signature brunch spread", subtitle: "Food styling placeholder", tone: "from-[#ffe29a] via-[#ffd37b] to-[#f7b66b]" },
-  { title: "Barista coffee moment", subtitle: "Drink shot placeholder", tone: "from-[#f2d2ab] via-[#d8a976] to-[#9b6d46]" },
+  {
+    title: "Signature drinks lineup",
+    subtitle: "Menu poster with real drinks",
+    tone: "from-[#ffe29a] via-[#ffd37b] to-[#f7b66b]",
+    imageSrc: "/content/signature-drinks.png",
+    imageAlt: "Sunny Side Up Cafe signature drinks poster showing Banana Matcha, Peanut Panic, Orange Sunrise, and Mint Chocolate",
+    imageFit: "contain",
+    imagePanelClassName: "bg-[#fff6cf]",
+  },
+  {
+    title: "Current drinks menu",
+    subtitle: "Menu snapshot",
+    tone: "from-[#f2d2ab] via-[#d8a976] to-[#9b6d46]",
+    imageSrc: "/content/drinks-menu.png",
+    imageAlt: "Sunny Side Up Cafe drinks menu showing coffee, non coffee, tea, juices, and signature drinks",
+    imageFit: "contain",
+    imagePanelClassName: "bg-[#fff7d8]",
+  },
   { title: "Sunny window seating", subtitle: "Interior placeholder", tone: "from-[#fff6dd] via-[#f5e4b7] to-[#d8bb8a]" },
-  { title: "Fresh pastries display", subtitle: "Dessert placeholder", tone: "from-[#ffd1a8] via-[#ffb98d] to-[#d8875c]" },
+  {
+    title: "Fresh pastries display",
+    subtitle: "Housemade pastries",
+    tone: "from-[#ffd1a8] via-[#ffb98d] to-[#d8875c]",
+    imageSrc: "/content/pastries.png",
+    imageAlt: "Sunny Side Up Cafe housemade pastries poster featuring scone, salt bread, banana cake, and cinnamon roll",
+    imageFit: "contain",
+    imagePanelClassName: "bg-[#d8e5f6]",
+  },
   { title: "Friends at brunch", subtitle: "Lifestyle placeholder", tone: "from-[#fff0c8] via-[#fbdc95] to-[#f0aa68]" },
   { title: "Cozy evening lighting", subtitle: "Cafe ambience placeholder", tone: "from-[#c99765] via-[#8e6343] to-[#4a3327]" },
 ];

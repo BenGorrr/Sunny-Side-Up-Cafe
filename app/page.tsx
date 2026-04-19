@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AboutSection } from "@/components/about-section";
 import { ContactSection } from "@/components/contact-section";
+import { DrinksMenuSection } from "@/components/drinks-menu-section";
 import { FeaturedMenuSection } from "@/components/featured-menu-section";
 import { Footer } from "@/components/footer";
 import { GallerySection } from "@/components/gallery-section";
@@ -72,6 +73,7 @@ export default function Home() {
             <main>
                 <HeroSection />
                 <FeaturedMenuSection items={featuredItems} />
+                <DrinksMenuSection />
                 <AboutSection />
                 <PromoSection promotions={promotions} />
                 <WhyVisitSection highlights={visitHighlights} />

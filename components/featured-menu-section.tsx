@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MenuItem } from "@/data/site";
 import { contactDetails } from "@/data/site";
@@ -11,8 +12,8 @@ export function FeaturedMenuSection({ items }: { items: MenuItem[] }) {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="Best Sellers"
-            title="The dishes people come back for"
-            description="A handpicked preview of the breakfast plates, drinks, mains, and desserts that keep our tables full and our regulars happy."
+            title="The signatures guests ask for most"
+            description="A handpicked preview of the signature drinks, bread, and pastry that keep customers coming back for another round."
           />
           <Link href={contactDetails.whatsapp} className="secondary-button">
             Ask for Full Menu
@@ -25,18 +26,30 @@ export function FeaturedMenuSection({ items }: { items: MenuItem[] }) {
               key={item.name}
               className="group overflow-hidden rounded-[28px] border border-white/70 bg-white/85 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-card"
             >
-              <PlaceholderImage
-                title={item.art}
-                subtitle={item.category}
-                className="min-h-56 rounded-none"
-                tone={
-                  index % 3 === 0
-                    ? "from-[#ffe49d] via-[#ffcc73] to-[#f4a261]"
-                    : index % 3 === 1
-                      ? "from-[#f6dcc6] via-[#d5a572] to-[#8d6242]"
-                      : "from-[#fff1d6] via-[#f2d39a] to-[#dda15e]"
-                }
-              />
+              {item.imageSrc ? (
+                <div className="relative min-h-56 overflow-hidden bg-[#fff7ec]">
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt ?? item.name}
+                    fill
+                    sizes="(min-width: 1280px) 24vw, (min-width: 768px) 45vw, 100vw"
+                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+              ) : (
+                <PlaceholderImage
+                  title={item.art}
+                  subtitle={item.category}
+                  className="min-h-56 rounded-none"
+                  tone={
+                    index % 3 === 0
+                      ? "from-[#ffe49d] via-[#ffcc73] to-[#f4a261]"
+                      : index % 3 === 1
+                        ? "from-[#f6dcc6] via-[#d5a572] to-[#8d6242]"
+                        : "from-[#fff1d6] via-[#f2d39a] to-[#dda15e]"
+                  }
+                />
+              )}
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
