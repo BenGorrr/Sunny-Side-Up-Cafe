@@ -77,12 +77,22 @@ export default function Home() {
                                 </p>
 
                                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                                    <Link href={contactDetails.whatsapp} className="primary-button">
+                                    <a
+                                        href={contactDetails.whatsapp}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="primary-button"
+                                    >
                                         WhatsApp Us
-                                    </Link>
-                                    <Link href={contactDetails.mapUrl} className="secondary-button">
+                                    </a>
+                                    <a
+                                        href={contactDetails.mapUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="secondary-button"
+                                    >
                                         Get Directions
-                                    </Link>
+                                    </a>
                                 </div>
 
                                 <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -300,12 +310,22 @@ export default function Home() {
                                 </div>
 
                                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                                    <Link href={contactDetails.whatsapp} className="primary-button">
+                                    <a
+                                        href={contactDetails.whatsapp}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="primary-button"
+                                    >
                                         Message on WhatsApp
-                                    </Link>
-                                    <Link href={contactDetails.mapUrl} className="secondary-button">
+                                    </a>
+                                    <a
+                                        href={contactDetails.mapUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="secondary-button"
+                                    >
                                         Open Map
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -322,9 +342,14 @@ export default function Home() {
                                 align="center"
                             />
                             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                                <Link href={contactDetails.whatsapp} className="primary-button">
+                                <a
+                                    href={contactDetails.whatsapp}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="primary-button"
+                                >
                                     Contact the Cafe
-                                </Link>
+                                </a>
                                 <Link href={`mailto:${contactDetails.email}`} className="secondary-button">
                                     Email Us
                                 </Link>

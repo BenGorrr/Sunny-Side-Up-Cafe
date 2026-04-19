@@ -168,13 +168,13 @@ export const contactDetails: ContactDetails = {
   address: "6, Riveria City, LG-08, 5, Jalan Tun Sambanthan, Brickfields, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
   phone: "+60 12-709 0504",
   whatsapp: "https://wa.me/60127090504",
-  mapUrl: "https://maps.google.com/?q=6,+Riveria+City,+LG-08,+5,+Jalan+Tun+Sambanthan,+Brickfields,+50470+Kuala+Lumpur",
-  email: "hello@sunnysideupcafe.com",
+  mapUrl: "https://maps.app.goo.gl/aqQM5yygGEURkeDr6",
+  email: "hello@sunnysideupcafe.my",
   hours: [
     { day: "Monday", hours: "9:30 AM - 5:00 PM" },
     { day: "Tuesday", hours: "Closed" },
     { day: "Wednesday - Sunday", hours: "9:30 AM - 5:00 PM" },
   ],
-  landmark: "A short walk from KL Sentral in Brickfields",
+  landmark: "We're located inside Riveria City. Just walk through the car park and you'll find us —- only a 2-minute walk from Airbnb Tower A",
   parking: "Free Street parking and gated visitors parking available",
 };

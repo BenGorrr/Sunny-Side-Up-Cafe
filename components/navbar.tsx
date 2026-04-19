@@ -44,12 +44,14 @@ export function Navbar({ details }: { details: ContactDetails }) {
                     </div>
 
                     <div className="hidden lg:block">
-                        <Link
+                        <a
                             href={details.whatsapp}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="primary-button"
                         >
                             WhatsApp Us
-                        </Link>
+                        </a>
                     </div>
 
                     <button
@@ -84,13 +86,15 @@ export function Navbar({ details }: { details: ContactDetails }) {
                                     {link.label}
                                 </Link>
                             ))}
-                            <Link
+                            <a
                                 href={details.whatsapp}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="primary-button w-full"
                                 onClick={() => setIsOpen(false)}
                             >
                                 WhatsApp Us
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 ) : null}

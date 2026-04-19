@@ -38,9 +38,14 @@ export function Footer({ details }: { details: ContactDetails }) {
             <p>{details.address}</p>
             <p>{details.phone}</p>
             <p>{details.email}</p>
-            <Link href={details.whatsapp} className="font-semibold text-cocoa transition hover:text-espresso">
+            <a
+              href={details.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-cocoa transition hover:text-espresso"
+            >
               WhatsApp Us
-            </Link>
+            </a>
           </div>
         </div>
 
